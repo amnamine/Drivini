@@ -1,0 +1,202 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    background: linear-gradient(to right, #4CAF50, #81C784);
+    color: white;
+    padding: 1.5rem 0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 1rem;
+    margin: 0.5rem 0 0;
+}
+
+/* Main Section Styling */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section Title */
+.resources h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Buttons */
+.button-container button {
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Button Colors */
+.btn-color1 {
+    background-color: #4CAF50;
+}
+
+.btn-color2 {
+    background-color: #FF5722;
+}
+
+.btn-color3 {
+    background-color: #3F51B5;
+}
+
+.btn-color4 {
+    background-color: #E91E63;
+}
+
+.btn-color5 {
+    background-color: #00BCD4;
+}
+
+.btn-color6 {
+    background-color: #8BC34A;
+}
+
+.btn-color7 {
+    background-color: #FF9800;
+}
+
+.btn-color8 {
+    background-color: #9C27B0;
+}
+
+.btn-color9 {
+    background-color: #03A9F4;
+}
+
+.btn-color10 {
+    background-color: #FFEB3B;
+    color: black;
+}
+
+.btn-color11 {
+    background-color: #CDDC39;
+    color: black;
+}
+
+.btn-color12 {
+    background-color: #795548;
+}
+
+.btn-color13 {
+    background-color: #2196F3;
+}
+
+.btn-color14 {
+    background-color: #673AB7;
+}
+
+.btn-color15 {
+    background-color: #FFC107;
+    color: black;
+}
+
+.btn-color16 {
+    background-color: #FF5252;
+}
+
+.btn-color17 {
+    background-color: #009688;
+}
+
+.btn-color18 {
+    background-color: #607D8B;
+}
+
+.btn-color19 {
+    background-color: #3D5AFE;
+}
+
+.btn-color20 {
+    background-color: #FFA726;
+}
+
+.btn-color21 {
+    background-color: #651FFF;
+}
+
+.btn-color22 {
+    background-color: #00E676;
+}
+
+.btn-color23 {
+    background-color: #D50000;
+}
+
+.btn-color24 {
+    background-color: #7C4DFF;
+}
+.btn-color25 {
+    background-color: #ff4da0;
+}.btn-color26 {
+    background-color: #4dfff0;
+}.btn-color27 {
+    background-color: #a04dff;
+}.btn-color28 {
+    background-color: #9dff4d;
+}.btn-color29 {
+    background-color: #4d9aff;
+}.btn-color30 {
+    background-color: #ffa34d;
+}.btn-color31 {
+    background-color: #ffde4d;
+}.btn-color32 {
+    background-color: #ff4d4d;
+}.btn-color33 {
+    background-color: #bbff4d;
+}.btn-color34 {
+    background-color: #71ff4d;
+}.btn-color35 {
+    background-color: #6e4dff;
+}.btn-color36 {
+    background-color: #4d5fff;
+}
+
+/* Button Hover Effects */
+.button-container button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #333;
+    color: white;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
