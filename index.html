@@ -4,19 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drivini</title>
+    <meta name="description" content="Drivini - Plateforme de ressources académiques pour les étudiants">
+    <meta name="theme-color" content="#6366f1">
+    <title>Drivini - Ressources Académiques</title>
     <link rel="icon" type="image/png" href="drive.png">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
     <header>
-        <h1>Gestion des Drives</h1>
-        <p>Explorez les ressources académiques organisées pour vos études et recherches.</p>
+        <div class="header-content">
+            <h1><i class="fas fa-graduation-cap"></i> Drivini</h1>
+            <p>Votre portail vers l'excellence académique - Ressources organisées pour vos études</p>
+        </div>
     </header>
+
     <main>
         <section class="resources">
-            <h2>Ressources Disponibles</h2>
+            <h2>Ressources Académiques</h2>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Rechercher des ressources..." onkeyup="searchResources()">
+                <i class="fas fa-search search-icon"></i>
+            </div>
             <div class="button-container">
                 <button class="btn-color1" onclick="window.location.href='https://drive.google.com/file/d/11HrLljodxiGhTsNKe7NXYVoeod42igrC/view '">Drive Réseaux et Télécom</button>
                 <button class="btn-color2" onclick="window.location.href='https://drive.google.com/file/d/1M94cFVmTPOGG82RE04DuxUlfloZfQvur/view '">Signaux Aléatoires</button>
@@ -52,16 +62,77 @@
                 <button class="btn-color32" onclick="window.location.href='https://drive.google.com/drive/folders/10t5xh_-9SVPJlbG42Ep7DNOFlGfRl2TM?usp=drive_link'">Mémoires Master 2</button>
                 <button class="btn-color33" onclick="window.location.href='https://drive.google.com/drive/folders/1u4j6ZlVwta56IN6Vk8hIOApNd2JHQqei?usp=drive_link'">Présentation Powerpoint Master 2</button>
                 <button class="btn-color34" onclick="window.location.href='https://drive.google.com/drive/folders/1b4FtSJLRk8MB-kWSDy2pxxtRprwBIah9?usp=drive_link'">Tronc Commun L1 ST</button>
-                <h2>CSCClub E-Copies and Website</h2>
-                <button class="btn-color35" onclick="window.location.href='https://cscc-ecopies.vercel.app/'">CSCC E-COPIES</button>
-                <button class="btn-color36" onclick="window.location.href='https://cscc-website.vercel.app/'">CSCC WEBSITE</button>
+                <button class="btn-color37" onclick="window.location.href='https://drive.google.com/drive/folders/1KFTw-lmhAS7L9vUE6MnxwK9YVqGBY5Ar?usp=drive_link'">Sujets Doctorat en Informatique</button>
+            </div>
+        </section>
 
+        <section class="cscclub-section">
+            <div class="section-divider">
+                <span class="divider-line"></span>
+                <i class="fas fa-code"></i>
+                <span class="divider-line"></span>
+            </div>
+            <h2>CSCClub Resources</h2>
+            <p class="section-description">Découvrez les ressources exclusives du Computer Science Club</p>
+            <div class="cscclub-container">
+                <button class="cscclub-btn btn-ecopies" onclick="window.location.href='https://cscc-ecopies.vercel.app/'">
+                    <i class="fas fa-book-reader"></i>
+                    <span class="btn-text">CSCC E-COPIES</span>
+                    <span class="btn-description">Accédez à notre bibliothèque numérique</span>
+                </button>
+                <button class="cscclub-btn btn-website" onclick="window.location.href='https://cscc-website.vercel.app/'">
+                    <i class="fas fa-globe"></i>
+                    <span class="btn-text">CSCC WEBSITE</span>
+                    <span class="btn-description">Visitez notre site officiel</span>
+                </button>
             </div>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2025 - Tous droits réservés</p>
+        <div class="footer-content">
+            <p><i class="far fa-copyright"></i> 2025 Drivini - Tous droits réservés</p>
+            <p class="footer-note"> - Drivini - </p>
+        </div>
     </footer>
+
+    <script>
+        function searchResources() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const buttons = document.querySelectorAll('.button-container button');
+
+            buttons.forEach(button => {
+                const text = button.textContent || button.innerText;
+                if (text.toLowerCase().includes(filter)) {
+                    button.style.display = "";
+                    button.style.opacity = "1";
+                    button.style.transform = "scale(1)";
+                } else {
+                    button.style.opacity = "0";
+                    button.style.transform = "scale(0.8)";
+                    setTimeout(() => {
+                        if (button.style.opacity === "0") {
+                            button.style.display = "none";
+                        }
+                    }, 300);
+                }
+            });
+        }
+
+        // Add animation on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.button-container button');
+            buttons.forEach((button, index) => {
+                button.style.opacity = "0";
+                button.style.transform = "translateY(20px)";
+                setTimeout(() => {
+                    button.style.opacity = "1";
+                    button.style.transform = "translateY(0)";
+                }, 100 * index);
+            });
+        });
+    </script>
 </body>
 
 </html>
